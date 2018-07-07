@@ -3,7 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="50dp"
-    android:background="@color/colorAccent"
+    android:background="@color/lightpink"
     android:orientation="vertical">
 
     <ImageView
@@ -14,7 +14,7 @@
         android:src="@drawable/back"/>
 
     <TextView
-        android:id="@+id/title_edit"
+        android:id="@+id/title_edit1"
         android:layout_width="40dp"
         android:layout_height="30dp"
         android:layout_alignParentRight="true"

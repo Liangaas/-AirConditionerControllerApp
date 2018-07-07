@@ -1,161 +1,76 @@
-<?xml version="1.0" encoding="utf-8"?>
-<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context="com.example.a24442.air_conditioner.SituationEdit">
+<?xml version="1.0" encoding="UTF-8"?>
 
-<LinearLayout
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:orientation="vertical">
-    <include layout="@layout/title"></include>
-
-    <RelativeLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/leaveMode"
-        android:layout_marginTop="10dp"
-        android:layout_marginBottom="10dp">
-        <ImageView
-            android:layout_width="40dp"
-            android:layout_height="40dp"
-            android:layout_alignParentLeft="true"
-            android:src="@drawable/leave"
-            android:id="@+id/leaveImage"/>
-        <TextView
-            android:id="@+id/leaveText"
-            android:text="@string/leaveMode"
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:textSize="20dp"
-            android:textAlignment="center"
-            android:layout_marginLeft="10dp"
-            android:layout_centerInParent="true"
-            android:layout_toEndOf="@id/leaveImage"/>
-        <ImageView
-            android:layout_width="30dp"
-            android:layout_height="40dp"
-            android:src="@drawable/detail"
-            android:layout_marginLeft="10dp"
-            android:layout_alignParentRight="true"
-            android:layout_alignParentEnd="true" />
-    </RelativeLayout>
-    <LinearLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:visibility="gone"
-        android:id="@+id/leaveEditMode">
-    <include layout="@layout/leafhome_edit"></include>
-    </LinearLayout>
-
-    <RelativeLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/peopleMode"
-        android:layout_marginTop="10dp"
-        android:layout_marginBottom="10dp">
-        <ImageView
-            android:layout_width="40dp"
-            android:layout_height="40dp"
-            android:layout_alignParentLeft="true"
-            android:src="@drawable/people"
-            android:id="@+id/peopleImage"/>
-        <TextView
-            android:id="@+id/peopleText"
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:textSize="20dp"
-            android:textAlignment="center"
-            android:layout_marginLeft="10dp"
-            android:layout_centerInParent="true"
-            android:layout_toEndOf="@id/peopleImage"
-            android:text="@string/peopleMode"/>
-        <ImageView
-            android:layout_width="30dp"
-            android:layout_height="40dp"
-            android:src="@drawable/detail"
-            android:layout_marginLeft="10dp"
-            android:layout_alignParentEnd="true"
-            android:layout_alignParentRight="true"/>
-    </RelativeLayout>
-    <LinearLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:visibility="gone"
-        android:id="@+id/peopleEditMode">
-    <include layout="@layout/peoplemode_edit"></include>
-    </LinearLayout>
-
-    <RelativeLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/temperatureMode"
-        android:layout_marginTop="10dp"
-        android:layout_marginBottom="10dp">
-        <ImageView
-            android:layout_width="40dp"
-            android:layout_height="40dp"
-            android:layout_alignParentLeft="true"
-            android:src="@drawable/temperature"
-            android:id="@+id/temperatureImage"/>
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:textSize="20dp"
-            android:textAlignment="center"
-            android:layout_marginLeft="10dp"
-            android:layout_centerInParent="true"
-            android:layout_toEndOf="@id/temperatureImage"
-            android:text="@string/tempatureMode"
-            android:id="@+id/temperatureText"/>
-        <ImageView
-            android:layout_width="30dp"
-            android:layout_height="40dp"
-            android:src="@drawable/detail"
-            android:layout_marginLeft="10dp"
-            android:layout_alignParentRight="true"
-            android:layout_alignParentEnd="true" />
-    </RelativeLayout>
-    <LinearLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:visibility="gone" android:id="@+id/tempEditMode">
-        <include layout="@layout/temp_felt_edit"></include>
-    </LinearLayout>
+    <ScrollView tools:context="com.example.a24442.air_conditioner.Activity.SituationEdit" android:background="@color/white" android:layout_height="match_parent" android:layout_width="match_parent" xmlns:tools="http://schemas.android.com/tools" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:android="http://schemas.android.com/apk/res/android">
 
 
-    <RelativeLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/customizeMode"
-        android:layout_marginTop="10dp"
-        android:layout_marginBottom="10dp">
-        <ImageView
-            android:layout_width="40dp"
-            android:layout_height="40dp"
-            android:src="@drawable/customize"
-            android:layout_alignParentLeft="true"
-            android:id="@+id/customizeImage"/>
-        <TextView
-            android:id="@+id/customizeText"
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:textSize="20dp"
-            android:textAlignment="center"
-            android:layout_marginLeft="10dp"
-            android:layout_centerInParent="true"
-            android:layout_toEndOf="@id/customizeImage"
-            android:text="@string/customizeMode"/>
-        <ImageView
-            android:layout_width="30dp"
-            android:layout_height="40dp"
-            android:src="@drawable/detail"
-            android:layout_marginLeft="10dp"
-            android:layout_alignParentEnd="true"
-            android:layout_alignParentRight="true"/>
-    </RelativeLayout>
+    -<LinearLayout android:layout_height="wrap_content" android:layout_width="match_parent" android:orientation="vertical">
+
+    <include layout="@layout/title"/>
+
+
+    -<RelativeLayout android:layout_height="wrap_content" android:layout_width="match_parent" android:layout_marginBottom="10dp" android:layout_marginTop="10dp" android:id="@+id/leaveMode">
+
+    <ImageView android:layout_height="40dp" android:layout_width="40dp" android:id="@+id/leaveImage" android:src="@drawable/leave" android:layout_alignParentLeft="true"/>
+
+    <TextView android:layout_height="match_parent" android:layout_width="wrap_content" android:id="@+id/leaveText" android:layout_toEndOf="@id/leaveImage" android:layout_centerInParent="true" android:layout_marginLeft="10dp" android:textColor="@color/lightpink" android:textAlignment="center" android:textSize="20dp" android:text="@string/leaveMode"/>
+
+    <ImageView android:layout_height="40dp" android:layout_width="30dp" android:src="@drawable/detail" android:layout_marginLeft="10dp" android:layout_alignParentEnd="true" android:layout_alignParentRight="true"/>
+
+</RelativeLayout>
+
+
+    -<LinearLayout android:layout_height="wrap_content" android:layout_width="wrap_content" android:id="@+id/leaveEditMode" android:visibility="gone">
+
+    <include layout="@layout/leafhome_edit"/>
+
+</LinearLayout>
+
+
+    -<RelativeLayout android:layout_height="wrap_content" android:layout_width="match_parent" android:layout_marginBottom="10dp" android:layout_marginTop="10dp" android:id="@+id/peopleMode">
+
+    <ImageView android:layout_height="40dp" android:layout_width="40dp" android:id="@+id/peopleImage" android:src="@drawable/old" android:layout_alignParentLeft="true"/>
+
+    <TextView android:layout_height="match_parent" android:layout_width="wrap_content" android:id="@+id/peopleText" android:layout_toEndOf="@id/peopleImage" android:layout_centerInParent="true" android:layout_marginLeft="10dp" android:textColor="@color/lightpink" android:textAlignment="center" android:textSize="20dp" android:text="@string/peopleMode"/>
+
+    <ImageView android:layout_height="40dp" android:layout_width="30dp" android:src="@drawable/detail" android:layout_marginLeft="10dp" android:layout_alignParentEnd="true" android:layout_alignParentRight="true"/>
+
+</RelativeLayout>
+
+
+    -<LinearLayout android:layout_height="wrap_content" android:layout_width="wrap_content" android:id="@+id/peopleEditMode" android:visibility="gone">
+
+    <include layout="@layout/peoplemode_edit"/>
+
+</LinearLayout>
+
+
+    -<RelativeLayout android:layout_height="wrap_content" android:layout_width="match_parent" android:layout_marginBottom="10dp" android:layout_marginTop="10dp" android:id="@+id/temperatureMode">
+
+    <ImageView android:layout_height="40dp" android:layout_width="40dp" android:id="@+id/temperatureImage" android:src="@drawable/temperature" android:layout_alignParentLeft="true"/>
+
+    <TextView android:layout_height="match_parent" android:layout_width="wrap_content" android:id="@+id/temperatureText" android:layout_toEndOf="@id/temperatureImage" android:layout_centerInParent="true" android:layout_marginLeft="10dp" android:textColor="@color/lightpink" android:textAlignment="center" android:textSize="20dp" android:text="@string/tempatureMode"/>
+
+    <ImageView android:layout_height="40dp" android:layout_width="30dp" android:src="@drawable/detail" android:layout_marginLeft="10dp" android:layout_alignParentEnd="true" android:layout_alignParentRight="true"/>
+
+</RelativeLayout>
+
+
+    -<LinearLayout android:layout_height="wrap_content" android:layout_width="wrap_content" android:id="@+id/tempEditMode" android:visibility="gone">
+
+    <include layout="@layout/temp_felt_edit"/>
+
+</LinearLayout>
+
+
+    -<RelativeLayout android:layout_height="wrap_content" android:layout_width="match_parent" android:layout_marginBottom="10dp" android:layout_marginTop="10dp" android:id="@+id/customizeMode">
+
+    <ImageView android:layout_height="40dp" android:layout_width="40dp" android:id="@+id/customizeImage" android:src="@drawable/customize" android:layout_alignParentLeft="true"/>
+
+    <TextView android:layout_height="match_parent" android:layout_width="wrap_content" android:id="@+id/customizeText" android:layout_toEndOf="@id/customizeImage" android:layout_centerInParent="true" android:layout_marginLeft="10dp" android:textColor="@color/lightpink" android:textAlignment="center" android:textSize="20dp" android:text="@string/customizeMode"/>
+
+    <ImageView android:layout_height="40dp" android:layout_width="30dp" android:src="@drawable/detail" android:layout_marginLeft="10dp" android:layout_alignParentEnd="true" android:layout_alignParentRight="true"/>
+
+</RelativeLayout>
 
 </LinearLayout>
 

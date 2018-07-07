@@ -5,7 +5,8 @@
     android:id="@+id/activity_main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.example.a24442.air_conditioner.MainActivity">
+    android:background="@android:color/white"
+    tools:context="com.example.a24442.air_conditioner.Activity.MainActivity">
 
     <LinearLayout
         android:id="@+id/ly_tab_bar"

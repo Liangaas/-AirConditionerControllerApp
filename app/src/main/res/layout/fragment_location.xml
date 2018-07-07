@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+    <LinearLayout
+    android:background="@color/white"
+    android:orientation="vertical"
+    android:layout_height="match_parent"
+    android:layout_width="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <include layout="@layout/title1"/>
+
+
+    <RelativeLayout
+    android:layout_height="wrap_content"
+    android:layout_width="wrap_content"
+    android:layout_marginLeft="30dp"
+    android:layout_marginTop="50dp">
+
+    <TextView
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:text="@string/locaton_text"
+        android:textSize="40px"
+        android:textColor="@color/lightpink"
+        android:id="@+id/HomeModel"/>
+
+    <TextView
+        android:layout_height="wrap_content"
+        android:layout_width="220dp"
+        android:layout_marginLeft="200dp"
+        android:text="@string/default_edit"
+        android:textSize="40px"
+        android:textColor="@color/lightpink"
+        android:id="@+id/HomeText"
+        android:layout_alignBottom="@+id/HomeModel"
+        android:layout_alignBaseline="@+id/HomeModel"/>
+
+</RelativeLayout>
+
+
+    <RelativeLayout
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="50dp">
+
+    <TextView
+        android:layout_height="wrap_content"
+        android:layout_width="180dp"
+        android:text="@string/open_dist_text"
+        android:textSize="40px"
+        android:textColor="@color/lightpink"
+        android:id="@+id/OpenModel"
+        android:minLines="2"/>
+
+    <TextView
+        android:layout_height="wrap_content"
+        android:layout_width="100dp"
+        android:layout_marginLeft="200dp"
+        android:text="@string/default_edit"
+        android:textSize="40px"
+        android:textColor="@color/lightpink"
+        android:id="@+id/OpenText"
+        android:layout_alignBottom="@+id/OpenModel"
+        android:layout_alignBaseline="@+id/OpenModel"/>
+
+</RelativeLayout>
+
+
+    <RelativeLayout
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="50dp">
+
+    <TextView
+        android:layout_height="wrap_content"
+        android:layout_width="180dp"
+        android:text="@string/close_dist_text"
+        android:textSize="40px"
+        android:textColor="@color/lightpink"
+        android:id="@+id/CloseModel"
+        android:minLines="2"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true"/>
+
+    <TextView
+        android:layout_height="wrap_content"
+        android:layout_width="220dp"
+        android:layout_marginLeft="200dp"
+        android:text="@string/default_edit"
+        android:textSize="40px"
+        android:textColor="@color/lightpink"
+        android:id="@+id/CloseText"
+        android:layout_alignBottom="@+id/CloseModel"
+        android:layout_alignBaseline="@+id/CloseModel"/>
+
+</RelativeLayout>
+
+
+    <RelativeLayout
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="50dp">
+
+    <TextView
+        android:layout_height="wrap_content"
+        android:layout_width="80dp"
+        android:text="@string/ideal_temp_text"
+        android:textSize="40px"
+        android:textColor="@color/lightpink"
+        android:id="@+id/IdealModel"/>
+
+    <TextView
+        android:layout_height="wrap_content"
+        android:layout_width="100dp"
+        android:layout_marginLeft="200dp"
+        android:text="@string/default_edit"
+        android:textSize="40px"
+        android:textColor="@color/lightpink"
+        android:id="@+id/IdealText"
+        android:layout_alignBottom="@+id/IdealModel"
+        android:layout_alignBaseline="@+id/IdealModel"/>
+
+</RelativeLayout>
+
+
+    <RelativeLayout
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="50dp">
+
+    <TextView
+        android:layout_height="wrap_content"
+        android:layout_width="150dp"
+        android:text="@string/temp_range_text"
+        android:textSize="40px"
+        android:textColor="@color/lightpink"
+        android:id="@+id/RangeModel"/>
+
+    <TextView
+        android:layout_height="wrap_content"
+        android:layout_width="100dp"
+        android:layout_marginLeft="200dp"
+        android:text="@string/default_edit"
+        android:textSize="40px"
+        android:textColor="@color/lightpink"
+        android:id="@+id/RangeText"
+        android:layout_alignBottom="@+id/RangeModel"
+        android:layout_alignBaseline="@+id/RangeModel"/>
+
+</RelativeLayout>
+
+</LinearLayout>

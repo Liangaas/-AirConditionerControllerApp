@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    >
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -19,7 +20,7 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:textColor="@color/white"
+            android:textColor="@color/lightpink"
             android:text="10月"
             android:layout_marginTop="45dp"
             android:layout_marginLeft="30dp"
@@ -33,6 +34,7 @@
             android:layout_alignBaseline="@+id/monthText"
             android:text="100"
             android:textSize="30dp"
+            android:textColor="@color/lightpink"
             android:singleLine="true"
             android:id="@+id/electricity"/>
         <TextView
@@ -40,6 +42,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="45dp"
             android:layout_marginLeft="210dp"
+            android:textColor="@color/lightpink"
             android:layout_alignBaseline="@+id/monthText"
             android:textSize="20dp"
             android:text="度"/>
@@ -52,6 +55,7 @@
             android:layout_alignParentEnd="true"
             android:layout_marginRight="22dp"
             android:maxLines="1"
+            android:textColor="@color/lightpink"
             android:text="100"
             android:textSize="30dp"
             />
@@ -60,6 +64,7 @@
             android:layout_height="wrap_content"
             android:layout_alignParentEnd="true"
             android:layout_alignBaseline="@+id/monthText"
+            android:textColor="@color/lightpink"
             android:textSize="20dp"
             android:text="元"/>
     </RelativeLayout>

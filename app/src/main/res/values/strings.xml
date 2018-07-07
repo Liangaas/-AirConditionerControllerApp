@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">My Application</string>
+    <string name="app_name">空调控制器</string>
 
     <string name="digits">1234567890.</string>
     <string name="locaton_text">家庭位置</string>
@@ -33,5 +33,7 @@
     <string name="text_voice">语音</string>
     <string name="text_location">定位</string>
     <string name="text_text">报告</string>
+    <string name="appwidget_text">EXAMPLE</string>
+    <string name="add_widget">Add widget</string>
 
 </resources>

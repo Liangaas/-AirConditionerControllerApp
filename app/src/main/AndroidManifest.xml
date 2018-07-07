@@ -6,6 +6,16 @@
     <meta-data
         android:name="com.amap.api.v2.apikey"
         android:value="084a95012accfee0cfd9bb627bb74379" />
+
+    <!-- 允许使用语音识别 -->
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.WRITE_SETTINGS" />
+
     <!-- 允许程序打开网络套接字 -->
     <uses-permission android:name="android.permission.INTERNET" />
     <!-- 允许程序设置内置sd卡的写权限 -->
@@ -19,6 +29,7 @@
     <!-- 允许程序访问CellID或WiFi热点来获取粗略的位置 -->
     <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
     <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -26,39 +37,36 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.AppCompat.NoActionBar">
-        <activity android:name=".MainActivity">
+        <activity android:name=".Activity.MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity
-            android:name=".Login_Activity"
-            android:label="登录" />
-        <activity
-            android:name=".RegisterActivity"
-            android:label="注册" />
-        <activity
-            android:name=".SettingActivity"
-            android:label="设置" />
-        <activity
-            android:name=".HelpActivity"
-            android:label="帮助" />
-        <activity
-            android:name=".EditActivity"
-            android:label="空调管理" />
-        <activity
-            android:name=".HeadPortraitActivity"
-            android:label="头像" />
-        <activity android:name=".ElectricDetail" />
-        <activity android:name=".ElectrcityList" />
-        <activity android:name=".GPSModeEdit" />
-        <activity android:name=".GPSModelActivity" />
-        <activity android:name=".HomeMapActivity" />
-        <activity android:name=".VoiceActivity"></activity>
-        <activity android:name=".SituationEdit"></activity>
-        <activity android:name=".SituationMode"></activity>
+        <activity android:name=".Activity.ElectricDetail" />
+        <activity android:name=".Activity.GPSModeEdit" />
+        <activity android:name=".Activity.SituationEdit" />
+        <activity android:name=".Activity.HomeMapActivity" />
+
+        <receiver android:name=".VoiceAppWidget">
+            <intent-filter>
+                <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+
+            <meta-data
+                android:name="android.appwidget.provider"
+                android:resource="@xml/voice_app_widget_info" />
+        </receiver>
+
+        <activity android:name=".Activity.VoiceDialogActivity"
+            android:excludeFromRecents="true"
+            android:launchMode="singleInstance"
+            android:documentLaunchMode="intoExisting"
+            android:theme="@style/AppDialogTheme"
+            >
+
+        </activity>
     </application>
 
 </manifest>

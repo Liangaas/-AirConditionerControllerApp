@@ -4,8 +4,9 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/white"
 
-    tools:context="com.example.a24442.air_conditioner.ElectrcityList">
+    tools:context="com.example.a24442.air_conditioner.Activity.ElectricDetail">
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -15,14 +16,7 @@
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
-            <Spinner
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:entries="@array/months"
-                android:layout_marginLeft="10dp"
-                android:layout_marginTop="15dp"
-                android:id="@+id/monthChoose">
-            </Spinner>
+
         </RelativeLayout>
 
         <RelativeLayout
@@ -36,6 +30,7 @@
                 android:text="@string/openTime"
                 android:textSize="20dp"
                 android:id="@+id/durTime"
+                android:textColor="@color/lightpink"
                 />
             <TextView
                 android:layout_marginLeft="250dp"
@@ -44,8 +39,20 @@
                 android:layout_height="wrap_content"
                 android:id="@+id/timeSet"
                 android:text="20h"
+                android:textColor="@color/lightpink"
                 android:textSize="20dp"
                 />
+
+            <Spinner
+                android:id="@+id/monthChoose"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginTop="8dp"
+                android:background="@color/lightpink"
+                android:entries="@array/months"
+                android:textColor="@color/lightpink"></Spinner>
         </RelativeLayout>
 
         <RelativeLayout
@@ -59,6 +66,7 @@
                 android:text="@string/electric"
                 android:textSize="20dp"
                 android:id="@+id/electric"
+                android:textColor="@color/lightpink"
                 />
             <TextView
                 android:layout_marginLeft="250dp"
@@ -68,6 +76,7 @@
                 android:text="150度"
                 android:textSize="20dp"
                 android:id="@+id/electricSet"
+                android:textColor="@color/lightpink"
                 />
         </RelativeLayout>
 
@@ -82,6 +91,7 @@
                 android:text="@string/electricPrice"
                 android:textSize="20dp"
                 android:id="@+id/price"
+                android:textColor="@color/lightpink"
                 />
             <TextView
                 android:layout_marginLeft="250dp"
@@ -91,6 +101,7 @@
                 android:text="1.5元／度"
                 android:textSize="20dp"
                 android:id="@+id/priceSet"
+                android:textColor="@color/lightpink"
                 />
         </RelativeLayout>
 
@@ -105,6 +116,7 @@
                 android:text="@string/electricCost"
                 android:textSize="20dp"
                 android:id="@+id/cost"
+                android:textColor="@color/lightpink"
                 />
             <TextView
                 android:layout_marginLeft="250dp"
@@ -114,6 +126,7 @@
                 android:text="300元"
                 android:textSize="20dp"
                 android:id="@+id/costSet"
+                android:textColor="@color/lightpink"
                 />
         </RelativeLayout>
 
@@ -123,16 +136,17 @@
             android:id="@+id/costDetail">
             <TextView
                 android:layout_marginLeft="40dp"
-                android:layout_marginTop="10dp"
+                android:layout_marginTop="15dp"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textSize="20dp"
                 android:text="@string/cost"
                 android:id="@+id/detail"
+                android:textColor="@color/lightpink"
                 />
             <ImageView
-                android:layout_width="20dp"
-                android:layout_height="20dp"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
                 android:layout_marginTop="15dp"
                 android:layout_marginLeft="250dp"
                 android:src="@drawable/detail"

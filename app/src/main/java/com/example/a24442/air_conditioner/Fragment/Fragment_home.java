@@ -1,27 +1,16 @@
 package com.example.a24442.air_conditioner.Fragment;
 
-import android.app.Activity;
-import android.content.Context;
-import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.app.Fragment;
-import android.support.v4.content.ContextCompat;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
-import com.example.a24442.air_conditioner.CircleImageView;
-import com.example.a24442.air_conditioner.EditActivity;
-import com.example.a24442.air_conditioner.HeadPortraitActivity;
-import com.example.a24442.air_conditioner.HelpActivity;
-import com.example.a24442.air_conditioner.Login_Activity;
 import com.example.a24442.air_conditioner.R;
-import com.example.a24442.air_conditioner.RegisterActivity;
-import com.example.a24442.air_conditioner.SettingActivity;
 
 /**
  * Created by 24442 on 2018/5/5.
@@ -29,12 +18,18 @@ import com.example.a24442.air_conditioner.SettingActivity;
 
 public class Fragment_home extends Fragment implements View.OnClickListener{
 
-   private ImageView user,iv_setting,iv_help,iv_edit;
-   private TextView tv_login,tv_register,tv_setting,tv_help;
-   private CircleImageView head_portrait;
 
-   private TextView tv_on_off;
-   private ImageView ib_on_off;
+    ImageView iv_up;
+    ImageView iv_down;
+    ImageView iv_cold;
+    ImageView iv_switch;
+    ImageView iv_hot;
+
+    TextView tv_temperature;
+
+    boolean hot_change;
+    boolean cold_change;
+    boolean switch_change;
 
     public static Fragment_home newInstantce(String tittle){
         Fragment_home fragment_home = new Fragment_home();
@@ -48,79 +43,101 @@ public class Fragment_home extends Fragment implements View.OnClickListener{
 
         View view = inflater.inflate(R.layout.fragment_home,container,false);
 
-        tv_login = (TextView)view.findViewById(R.id.tv_login);
-        tv_register =(TextView) view.findViewById(R.id.tv_register);
-        tv_setting =(TextView) view.findViewById(R.id.tv_setting);
-        tv_help =(TextView) view.findViewById(R.id.tv_help);
-        iv_setting =(ImageView) view.findViewById(R.id.iv_setting);
-        iv_help =(ImageView) view.findViewById(R.id.iv_help);
-        iv_edit =(ImageView) view.findViewById(R.id.iv_edit);
-        head_portrait = (CircleImageView) view.findViewById(R.id.head_portrait);
+        iv_up = (ImageView) view.findViewById(R.id.iv_up);
+        iv_down = (ImageView) view.findViewById(R.id.iv_down);
+        iv_cold = (ImageView) view.findViewById(R.id.iv_cold);
+        iv_switch = (ImageView) view.findViewById(R.id.iv_switch);
+        iv_hot = (ImageView) view.findViewById(R.id.iv_hot);
 
-        tv_login.setOnClickListener(this);
-        tv_register.setOnClickListener(this);
-        tv_setting.setOnClickListener(this);
-        tv_help.setOnClickListener(this);
-        iv_edit.setOnClickListener(this);
-        iv_setting.setOnClickListener(this);
-        iv_help.setOnClickListener(this);
-        head_portrait.setOnClickListener(this);
+        hot_change = false;
+        cold_change = false;
+        switch_change = false;
 
-        tv_on_off = view.findViewById(R.id.tv_temperature);
+        tv_temperature = (TextView) view.findViewById(R.id.tv_temperature);
 
-        ib_on_off = view.findViewById(R.id.ib_switch);
+        iv_up.setOnClickListener(this);
+        iv_down.setOnClickListener(this);
+        iv_cold.setOnClickListener(this);
+        iv_switch.setOnClickListener(this);
+        iv_hot.setOnClickListener(this);
 
-        ib_on_off.setOnClickListener(this);
         return view;
     }
     @Override
     public void onClick(View v) {
         switch (v.getId()){
-            case R.id.tv_login:
-                Intent intent_tv_login  = new Intent(getActivity(),Login_Activity.class);
-                getActivity().startActivity(intent_tv_login);
-                break;
-            case R.id.tv_register:
-                Intent intent_tv_register  = new Intent(getActivity(),RegisterActivity.class);
-                getActivity().startActivity(intent_tv_register);
-                break;
-            case R.id.tv_setting:
-                Intent intent_tv_setting  = new Intent(getActivity(),SettingActivity.class);
-                getActivity().startActivity(intent_tv_setting);
-                break;
-            case R.id.tv_help:
-                Intent intent_tv_help  = new Intent(getActivity(),HelpActivity.class);
-                getActivity().startActivity(intent_tv_help);
-                break;
-            case R.id.iv_edit:
-                Intent intent_iv_edit  = new Intent(getActivity(),EditActivity.class);
-                getActivity().startActivity(intent_iv_edit);
-                break;
-            case R.id.iv_setting:
-                Intent intent_iv_setting  = new Intent(getActivity(),SettingActivity.class);
-                getActivity().startActivity(intent_iv_setting);
-                break;
-            case R.id.iv_help:
-                Intent intent_iv_help  = new Intent(getActivity(),HelpActivity.class);
-                getActivity().startActivity(intent_iv_help);
-                break;
-            case R.id.head_portrait:
-                Intent intent_head_portrait = new Intent(getActivity(),HeadPortraitActivity.class);
-                getActivity().startActivity(intent_head_portrait);
-                break;
-            case R.id.ib_switch:
-
-                if(tv_on_off.getText() == "开"){
-                    tv_on_off.setText("关");
-                } else
-                {
-                    tv_on_off.setText("开");
+            case R.id.iv_up:
+                int tu = Integer.parseInt(tv_temperature.getText().toString());
+                 if (tu >= 30){
+                    Toast.makeText(getContext(),"温度已达最高",Toast.LENGTH_SHORT).show();
+                }else {
+                    tu = tu + 1;
+                    tv_temperature.setText(Integer.toString(tu));
                 }
                 break;
-            case R.id.ib_cold:
 
+            case R.id.iv_down:
+                int td = Integer.parseInt(tv_temperature.getText().toString());
+                if (td <= 20){
+                    Toast.makeText(getContext(),"温度已达最低",Toast.LENGTH_SHORT).show();
+                }else {
+                    td = td - 1;
+                    tv_temperature.setText(Integer.toString(td));
+                }
                 break;
-            case R.id.ib_hot:
+
+            case R.id.iv_hot:
+                if (switch_change) {
+                    if (!hot_change) {
+                        if (!cold_change) {
+                            iv_hot.setImageResource(R.drawable.hot_pressed);
+                            Toast.makeText(getContext(), "热风已开", Toast.LENGTH_SHORT).show();
+                        }else {
+                            iv_hot.setImageResource(R.drawable.hot_pressed);
+                            iv_cold.setImageResource(R.drawable.cold);
+                            cold_change = !cold_change;
+                            Toast.makeText(getContext(), "热风已开", Toast.LENGTH_SHORT).show();
+                        }
+                    } else {
+                        iv_hot.setImageResource(R.drawable.hot);
+                        Toast.makeText(getContext(), "热风已关", Toast.LENGTH_SHORT).show();
+                    }
+                    hot_change = !hot_change;
+                }else {
+                    Toast.makeText(getContext(),"请先开空调!",Toast.LENGTH_SHORT).show();
+                }
+                break;
+            case R.id.iv_switch:
+                if (!switch_change){
+                    iv_switch.setImageResource(R.drawable.on_off_pressed );
+                    Toast.makeText(getContext(),"空调已开",Toast.LENGTH_SHORT).show();
+                }else {
+                    iv_switch.setImageResource(R.drawable.on_off);
+                    Toast.makeText(getContext(),"空调已关",Toast.LENGTH_SHORT).show();
+                }
+                switch_change = !switch_change;
+                break;
+            case R.id.iv_cold:
+                if (switch_change){
+                    if (!cold_change){
+                        if (!hot_change){
+                            iv_cold.setImageResource(R.drawable.cold_pressed );
+                            Toast.makeText(getContext(),"冷风已开",Toast.LENGTH_SHORT).show();
+                        }else {
+                            iv_cold.setImageResource(R.drawable.cold_pressed );
+                            iv_hot.setImageResource(R.drawable.hot);
+                            hot_change = !hot_change;
+                            Toast.makeText(getContext(),"冷风已开",Toast.LENGTH_SHORT).show();
+                        }
+
+                    }else {
+                        iv_cold.setImageResource(R.drawable.cold);
+                        Toast.makeText(getContext(),"冷风已关",Toast.LENGTH_SHORT).show();
+                    }
+                    cold_change = !cold_change;
+                }else {
+                    Toast.makeText(getContext(),"请先开空调!",Toast.LENGTH_SHORT).show();
+                }
 
                 break;
             default:

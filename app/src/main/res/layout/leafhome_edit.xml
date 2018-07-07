@@ -1,52 +1,17 @@
-<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="UTF-8"?>
 
-<RelativeLayout android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    xmlns:android="http://schemas.android.com/apk/res/android"
-    >
-        <Spinner
-            android:id="@+id/leaveDate"
-            android:layout_marginLeft="20dp"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:entries="@array/date"></Spinner>
-        <TextView
-            android:layout_alignBaseline="@id/leaveDate"
-            android:layout_toEndOf="@id/leaveDate"
-            android:layout_marginLeft="10dp"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:hint="@string/time_start"
-            android:id="@+id/leaveTimeStart"/>
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text=" — "
-            android:id="@+id/mid1"
-            android:layout_alignBaseline="@id/leaveDate"
-            android:layout_toEndOf="@id/leaveTimeStart"/>
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:hint="@string/time_end"
-            android:id="@+id/leaveTimeEnd"
-            android:layout_alignBaseline="@id/leaveDate"
-            android:layout_toEndOf="@id/mid1"/>
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="40dp"
-            android:text="@string/leave"
-            android:layout_marginLeft="25dp"
-            android:textSize="18dp"
-            android:id="@+id/leave"/>
-        <Button
-            android:id="@+id/btLeave"
-            android:layout_width="60dp"
-            android:layout_height="40dp"
-            android:layout_marginTop="70dp"
-            android:layout_toEndOf="@id/leave"
-            android:text="确定"
-            android:textSize="15dp"/>
-    </RelativeLayout>
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" android:layout_height="wrap_content" android:layout_width="match_parent">
 
+        <Spinner android:layout_height="wrap_content" android:layout_width="wrap_content" android:entries="@array/date" android:layout_marginLeft="20dp" android:id="@+id/leaveDate"/>
+
+        <TextView android:layout_height="wrap_content" android:layout_width="wrap_content" android:layout_marginLeft="10dp" android:id="@+id/leaveTimeStart" android:hint="@string/time_start" android:textColor="@color/lightpink" android:layout_toEndOf="@id/leaveDate" android:layout_alignBaseline="@id/leaveDate"/>
+
+        <TextView android:layout_height="wrap_content" android:layout_width="wrap_content" android:id="@+id/mid1" android:textColor="@color/lightpink" android:layout_toEndOf="@id/leaveTimeStart" android:layout_alignBaseline="@id/leaveDate" android:text=" — "/>
+
+        <TextView android:layout_height="wrap_content" android:layout_width="wrap_content" android:id="@+id/leaveTimeEnd" android:hint="@string/time_end" android:textColor="@color/lightpink" android:layout_toEndOf="@id/mid1" android:layout_alignBaseline="@id/leaveDate"/>
+
+        <TextView android:layout_height="wrap_content" android:layout_width="wrap_content" android:layout_marginLeft="25dp" android:id="@+id/leave" android:textColor="@color/lightpink" android:text="@string/leave" android:textSize="18dp" android:layout_marginTop="40dp"/>
+
+        <Button android:layout_height="40dp" android:layout_width="60dp" android:id="@+id/btLeave" android:layout_toEndOf="@id/leave" android:text="确定" android:textSize="15dp" android:layout_marginTop="70dp"/>
+
+</RelativeLayout>

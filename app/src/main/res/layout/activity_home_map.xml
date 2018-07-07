@@ -5,7 +5,8 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context="com.example.a24442.air_conditioner.HomeMapActivity">
+    android:background="@android:color/white"
+    tools:context="com.example.a24442.air_conditioner.Activity.HomeMapActivity">
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
@@ -24,21 +25,26 @@
             <TextView
                 android:background="@color/white"
                 android:layout_width="100dp"
-                android:layout_height="wrap_content"
+                android:layout_height="50dp"
                 android:layout_alignParentLeft="true"
                 android:id="@+id/homeText"
                 android:text="广东省广州市华南理工大学大学城校区"
                 android:textSize="17dp"
-                android:textColor="@android:color/black"
+                android:backgroundTint="@color/lightgray"
+                android:textColor="@android:color/white"
                 android:layout_toStartOf="@+id/sureLocation" />
+
             <Button
                 android:layout_width="100dp"
-                android:layout_height="wrap_content"
+                android:layout_height="50dp"
+                android:layout_marginBottom="0dp"
+                android:background="@color/lightpink"
                 android:text="确定"
                 android:textSize="20dp"
                 android:layout_alignParentRight="true"
                 android:id="@+id/sureLocation"
                 />
+
         </RelativeLayout>
     </RelativeLayout>
 </LinearLayout>
